@@ -26,42 +26,23 @@ inputs.forEach((input)=>{
     });
 });
 
-// var list1 =[];
-// var list2 =[];
-// var list3 =[];
-// var list4 =[];
-
-var n = 1;
-// var x = 0;
-
+let data=[];
 function sub1()
 {
- var AddRown= document.getElementById('show');
- var NewRow= AddRown.insertRow(n);
 var list={
-
 Firstname : document.getElementById("Firstname").value,
 Lastname : document.getElementById("Lastname").value,
 Email : document.getElementById("Email").value,
 telephone : document.getElementById("telephone").value
 }
- var cel1 = NewRow.insertCell(0);
- var cel2 = NewRow.insertCell(1);
- var cel3 = NewRow.insertCell(2);
- var cel4 = NewRow.insertCell(3);
+data.push(list);
 
- cel1.innerHTML = list.Firstname;
- cel2.innerHTML = list.Lastname;
- cel3.innerHTML = list.Email;
- cel4.innerHTML = list.telephone;
-
- n++;
- 
 let btnclear=document.querySelector('#clear');
 let inputs=document.querySelectorAll('#Firstname,#Lastname,#Email,#telephone');
 
  btnclear.addEventListener('click',() =>{
-     inputs.forEach(input => input.value  = '' )
+     inputs.forEach(input => input.value  = ''
+     )
 
  });
 }
