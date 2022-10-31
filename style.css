@@ -1,56 +1,72 @@
-.container{
-    text-align: center;
-   /* background-color: antiquewhite; */
-    position: absolute;
-    width: 500px;
+*{
     box-sizing: border-box;
-    display: block;
-    /* width: 58%; */
-    /* border:3px solid #000000; */
-    padding:0px 0px 10px 0px;
 }
-.content{
-    background-color: gainsboro;
-    /* display: block; */
-    /* width: 100%; */
-    /* box-sizing: border-box; */
-    padding:20px;margin: 20px;
+body{
+    background-color: #f9fafb;
+    font-family:'Times New Roman', Times, serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
 }
-p{
-   margin:0px;
-   text-align: right;
-   font-size: 10px;
-   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-   padding: 0px 75px 15px 5px;
-   font-weight: bold;
+.container{
+    background-color: white;
+    border-radius: 5px;
+    width: 400px;
+}
+.form{
+    padding: 20px 40px;
+}
+h1{
+    text-align: center;
+    margin: 0 0 20px;
 }
 label{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
 }
-
-/*validation styles */
-input{
-   
-    padding: 8px 16px;
-    border-radius: 10px;
-    border: 3px solid #ccc;
-    outline: none;
+.form-control{   
+   margin-bottom: 10px;
+   padding-bottom: 20px;
+   position: relative;
 }
-
-input.valid{
+.form-control label{
+    color: black;
+    display: block;
+    margin-bottom: 5px;
+}
+/*validation styles */
+.form-control input{   
+    padding: 10px;
+    border-radius: 4px;
+    border: 3px solid #ccc;
+    display: block;
+    width: 100%;
+    font-size: 14px;
+}
+.form-control input:focus{
+    outline: 0;
+    border-color: #777;
+}
+.form-control.success input{
     border-color: green;
 }
-input.invalid{
+.form-control.error input{
     border-color: red;
 }
-input +p{
-    color: crimson;
-   opacity: 0;
-    height: 0;
+.form-control.success small{
+    border-color: green;
 }
-input.invalid+p{
-    opacity: 1;
+.form-control small{
+    color: red;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+.form-control.error small{
+    visibility: visible;
 }
 table{
     text-align: center;
@@ -59,3 +75,28 @@ table{
 #show th{
     padding: 15px;
 }
+.btn{
+    padding: 6px;
+    margin: 3px;
+    background:#e56060;
+    border: silver;
+    color: white;
+    border-radius: 3px;
+}
+#submit{
+    background: #3498db;
+    border: 2px solid #3498db;
+    font-weight: bold;
+    color: white;
+    border-radius: 4px;
+    /*display: block; */
+    padding: 10px;
+}
+#clear{
+    background: orangered;
+    padding: 10px;
+    border: 2px solid silver;
+    font-weight: bold;
+    color: white;
+    border-radius: 4px;
+    }
