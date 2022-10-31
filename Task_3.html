@@ -11,34 +11,45 @@
 
 
 <body>
-  <div class="container"> 
+<div class="container"> 
+<form class="form" id="form">
  <h1 >Form Validation</h1>
-<div class="content">
-  <label>First name:</label>
-  <input type="text" name= "Firstname" id= "Firstname" placeholder="Type something..." >
-  <p class="small_txt"> Username must not exceed 25 letters</p>
-  <label>Last name:</label>
-  <input type="text" name= "Lastname" id= "Lastname" placeholder="Type something..." >
-  <p>Username must not exceed 25 letters</p>
-  <label>E-mail ID:</label>
-  <input type="text" name= "Email" id= "Email" placeholder="Type something..." >
-  <p>Please enter a valid E-mail ID</p>
-  <label>Phone No:</label>
-  <input type="text" name= "Telephone" id= "Telephone" placeholder="Type something..." >
-  <p>Please enter a valid Phone number</p>
-  <button id="submit" onclick="sub1()" >SUBMIT</button> 
 
-  <button id="clear" onClick="clearAllFields()">Clear</button><br><br>
+  <div class="form-control">
+    <label>First name:</label>
+    <input type="text" name= "Firstname" id= "Firstname" placeholder="Type something..." >
+    <small id="error-Msg">Firstname must not exceed 20 letters</small>
+  </div>
+
+  <div class="form-control">
+    <label>Last name:</label>
+    <input type="text" name= "Lastname" id= "Lastname" placeholder="Type something..." >
+    <small id="error-Msg">Lastname must not exceed 20 letters</small>
+  </div>
+  
+  <div class="form-control">
+    <label>E-mail ID:</label>
+    <input type="text" name= "Email" id= "Email" placeholder="Type something..." >
+    <small id="error-Msg">Please enter a valid E-mail Id</small>
+  </div>
+  
+  <div class="form-control">
+    <label>Phone No:</label>
+    <input type="text" name= "Telephone" id= "Telephone" placeholder="Type something..." >
+    <small id="error-Msg">Please enter a valid 10-digit nmber</small>
+  </div>
+  
+  <button type="submit" id="submit">SUBMIT</button> 
+
+  <button type="button" id="clear" onClick="clearAllFields()">Clear</button><br><br>
 
 
-</div>
 
+</form>
 <div id="tableDiv"></div>
-
 </div> 
-<script src="script.js">
 
-</script>
+<script src="scriptss.js"></script>
+
 </body>
-
 </html>
